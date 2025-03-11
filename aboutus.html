@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Black Beauty Hive</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -13,13 +14,17 @@
         <nav>
             <a href="index.html">Home</a> |
             <a href="services.html">Services</a> |
-            <a href="walkins.html">Walk-Ins</a>
+            <a href="walkins.html">Walk-Ins</a> |
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <section>
         <h2>Meet the Founder</h2>
-        <p><strong>Brianna Vondrak</strong>, the visionary behind <u>Black Beauty Hive</u>, is dedicated to making Black beauty more attainable and accessible for everyone.</p>
+        <div class="founder">
+            <img src="images/founder.jpg" alt="Brianna Vondrak" class="founder-img">
+            <p><strong>Brianna Vondrak</strong>, the visionary behind <u>Black Beauty Hive</u>, is dedicated to making Black beauty more attainable and accessible for everyone. Her passion for the industry and commitment to the community drives every aspect of the platform.</p>
+        </div>
     </section>
 
     <section>
@@ -31,11 +36,12 @@
             <li>Trending and protective hairstyles</li>
             <li>A supportive and inclusive beauty space</li>
         </ul>
+        <img src="images/mission.jpg" alt="Our mission" class="feature-img">
     </section>
 
     <section>
         <h2>Why Choose Us?</h2>
-        <table border="1">
+        <table>
             <tr>
                 <th>Feature</th>
                 <th>Benefit</th>
@@ -53,9 +59,17 @@
                 <td>A space to share, learn, and celebrate Black beauty.</td>
             </tr>
         </table>
+        <img src="images/community.jpg" alt="Community" class="feature-img">
+    </section>
+
+    <section>
+        <h2>Get Involved</h2>
+        <p>Join us in celebrating and empowering Black beauty. Whether you are a stylist, beauty enthusiast, or someone looking to get started in the beauty industry, there’s a place for you at Black Beauty Hive!</p>
+        <button onclick="window.location.href='contact.html'">Contact Us</button>
     </section>
 
     <footer>
+        <p>Contact us: (555) 123-4567 | Email: info@blackbeautyhive.com</p>
         <p>&copy; 2025 <strong>Black Beauty Hive</strong>. All rights reserved.</p>
     </footer>
 </body>
