@@ -95,6 +95,15 @@ a:hover {
     margin: 15px auto;
     border-radius: 10px;
 }
+.founder-img {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 10px;
+    width: auto;
+    max-height: 80vh; 
+}
 
 #image-slider {
     text-align: center;
