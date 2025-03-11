@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walk-In Stylists | Black Beauty Hive</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -14,7 +15,8 @@
             <a href="index.html">Home</a> |
             <a href="about.html">About</a> |
             <a href="services.html">Services</a> |
-            <a href="walkins.html">Walk-Ins</a>
+            <a href="walkins.html">Walk-Ins</a> |
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
@@ -26,11 +28,12 @@
             <li><strong>Expertise:</strong> Skilled stylists offering high-quality services.</li>
             <li><strong>Accessibility:</strong> Multiple locations to suit your needs.</li>
         </ul>
+        <img src="images/salon.jpg" alt="Salon interior" class="feature-img">
     </section>
 
     <section>
         <h2>Available Walk-In Stylists</h2>
-        <table border="1">
+        <table>
             <tr>
                 <th>Name</th>
                 <th>Specialty</th>
@@ -64,6 +67,14 @@
         </table>
     </section>
 
+    <section id="stylist-slider">
+        <h2>Meet Our Walk-In Stylists</h2>
+        <img src="images/stylist1.jpg" class="slide" alt="Stylist 1">
+        <img src="images/stylist2.jpg" class="slide" alt="Stylist 2" style="display:none">
+        <img src="images/stylist3.jpg" class="slide" alt="Stylist 3" style="display:none">
+        <button onclick="nextSlide()">Next</button>
+    </section>
+
     <section>
         <h2>How to Prepare for Your Walk-In Appointment</h2>
         <ul>
@@ -75,11 +86,14 @@
     </section>
 
     <p>
-        Visit your preferred stylist today or call ahead to check for availability!
+        <a href="https://www.example.com/book-appointment" target="_blank">Book Your Stylist Here</a>
     </p>
 
     <footer>
+        <p>Contact us: (555) 123-4567 | Email: info@blackbeautyhive.com</p>
+        <p>Visit us: 123 Beauty Lane, Cleveland, OH | Open: Mon-Sat 9 AM - 7 PM</p>
         <p>&copy; 2025 <strong>Black Beauty Hive</strong>. All rights reserved.</p>
+        <button id="backToTop">Back to Top</button>
     </footer>
 </body>
 </html>

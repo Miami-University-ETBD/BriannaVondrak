@@ -1,8 +1,9 @@
 body {
-    font-family: Georgia, sans-serif;
+    font-family: Georgia, serif;
     background-color: #ffecd1;
     color: #001524;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
 }
 
@@ -14,49 +15,60 @@ header {
     border-radius: 8px;
 }
 
+nav {
+    margin-top: 10px;
+}
+
 nav a {
     color: #ffecd1;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 0 15px;
+    padding: 10px;
 }
 
 nav a:hover {
     text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
 h1, h2 {
     color: #001524;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 p {
     font-size: 1.1em;
     text-align: center;
+    padding: 0 15px;
 }
 
 ul {
     list-style-type: square;
-    padding-left: 20px;
+    padding-left: 30px;
+    margin-bottom: 20px;
 }
 
 blockquote {
     font-style: italic;
     border-left: 4px solid #15616d;
-    padding-left: 10px;
+    padding-left: 15px;
     margin: 20px;
-    color: #444;
+    color: #333;
+    font-size: 1.2em;
 }
 
 table {
-    width: 100%;
+    width: 90%;
+    margin: 20px auto;
     border-collapse: collapse;
-    margin-top: 15px;
 }
 
 th, td {
     border: 1px solid #001524;
-    padding: 10px;
+    padding: 12px;
     text-align: left;
 }
 
@@ -73,6 +85,52 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: #0a3a40;
+}
+
+.feature-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+.founder-img {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 10px;
+    width: auto;
+    max-height: 80vh; 
+}
+
+#image-slider {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#image-slider img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    transition: opacity 0.5s;
+}
+
+button {
+    display: inline-block;
+    background-color: #15616d;
+    color: #ffecd1;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #104a57;
 }
 
 footer {
@@ -82,4 +140,30 @@ footer {
     color: #ffecd1;
     margin-top: 20px;
     border-radius: 8px;
+    font-size: 0.9em;
+}
+
+#backToTop {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1em;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        margin: 5px 0;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    #image-slider img {
+        width: 95%;
+    }
 }
