@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Beauty Hive</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>Black Beauty Hive</h1>
         <p>Your go-to platform for Black hair care, hairstylists, and trending styles!</p>
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
             <a href="services.html">Services</a>
+            <a href="walkins.html">Walk-Ins</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
-
+    
     <section>
         <h2>Welcome to Black Beauty Hive!</h2>
         <p>
             We provide a space where you can <strong>book hairstylists</strong>, 
-            <u>purchase high-quality hair products and hair</u>, and 
+            <u>purchase high-quality hair products</u>, and 
             <em>stay updated on the latest trends on social media</em>. 
-            Our mission is to celebrate and empower Black beauty and hairstylists in the Cleveland area.
         </p>
+        <img src="images/logo.png" alt="Black Beuaty Hive Logo" class="feature-img">
     </section>
     
     <blockquote>
@@ -71,8 +74,23 @@
         <a href="https://www.example.com" target="_blank">Find Your Stylist</a>
     </p>
 
+    <section id="image-slider">
+        <h2>Trending Styles</h2>
+        <img src="images/style1.jpg" class="slide" alt="Style 1">
+        <img src="images/style2.jpg" class="slide" alt="Style 2" style="display:none">
+        <img src="images/style3.jpg" class="slide" alt="Style 3" style="display:none">
+        <button onclick="nextSlide()">Next</button>
+    </section>
+    
+    <p>
+        <a href="https://www.example.com" target="_blank">Find Your Stylist</a>
+    </p>
+    
     <footer>
+        <p>Contact us: (555) 123-4567 | Email: info@blackbeautyhive.com</p>
         <p>&copy; 2025 Black Beauty Hive. All rights reserved.</p>
+        <button id="backToTop">Back to Top</button>
     </footer>
 </body>
 </html>
+
