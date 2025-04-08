@@ -5,7 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walk-In Stylists | Black Beauty Hive</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <style>
+        /* Centering the Hair Care Tips section */
+        #hair-care-tips {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Ensuring collapsible sections are initially hidden */
+        .collapsible-body {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .collapsible-header {
+            background-color: #15616d;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            width: 80%;
+            text-align: center;
+        }
+
+        /* Optional styling to make the collapsible buttons look better */
+        .collapsible-header:hover {
+            background-color: #ddd;
+        }
+
+        .collapsible-body p {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -89,11 +123,61 @@
         <a href="https://www.example.com/book-appointment" target="_blank">Book Your Stylist Here</a>
     </p>
 
+    <!-- Hair Care Tips Section -->
+    <section id="hair-care-tips">
+        <h2>Hair Care Tips & FAQs</h2>
+        <div class="collapsible">
+            <button class="collapsible-header">How often should I moisturize my natural hair?</button>
+            <div class="collapsible-body">
+                <p>Ideally 2-3 times a week, depending on your hair porosity and environment.</p>
+            </div>
+        </div>
+        <div class="collapsible">
+            <button class="collapsible-header">Can heat damage be reversed?</button>
+            <div class="collapsible-body">
+                <p>Unfortunately, no. It's best to trim the damaged ends and avoid excessive heat in the future.</p>
+            </div>
+        </div>
+        <div class="collapsible">
+            <button class="collapsible-header">What's the best product for defining curls?</button>
+            <div class="collapsible-body">
+                <p>Look for curl creams with ingredients like shea butter, flaxseed, or aloe vera.</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>Contact us: (555) 123-4567 | Email: info@blackbeautyhive.com</p>
         <p>Visit us: 123 Beauty Lane, Cleveland, OH | Open: Mon-Sat 9 AM - 7 PM</p>
         <p>&copy; 2025 <strong>Black Beauty Hive</strong>. All rights reserved.</p>
         <button id="backToTop">Back to Top</button>
     </footer>
+
+    <script>
+        // Image Slider Logic
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function nextSlide() {
+            slides[slideIndex].style.display = "none";
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].style.display = "block";
+        }
+
+        // Back to Top Button
+        document.getElementById('backToTop').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Collapsible Sections Logic
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+        collapsibleHeaders.forEach(header => {
+            header.addEventListener('click', function () {
+                const body = this.nextElementSibling;
+                body.style.display = body.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
 </body>
 </html>
