@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Beauty Hive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #ffecd1;
+            color: #001524;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header-bg {
+            background-color: #15616d; /* Light pink background */
+        }
+        header {
+            background-color: #15616d;
+            color: #ffecd1;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #ffecd1;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        h1, h2 {
+            color: #001524;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid #15616d;
+            padding-left: 15px;
+            margin: 20px;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #001524;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #15616d;
+            color: #ffecd1;
+        }
+
+        a {
+            color: #15616d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0a3a40;
+        }
+
+        .feature-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+
+        .founder-img {
+            display: block;
+            max-width: 90%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 10px;
+            width: auto;
+            max-height: 80vh; 
+        }
+
+        #image-slider {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #image-slider img {
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            transition: opacity 0.5s;
+        }
+
+        button {
+            display: inline-block;
+            background-color: #15616d;
+            color: #ffecd1;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #104a57;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #15616d;
+            color: #ffecd1;
+            margin-top: 20px;
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+
+        #backToTop {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 1em;
+            }
+
+            nav a {
+                display: block;
+                text-align: center;
+                padding: 10px 0;
+                margin: 5px 0;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            #image-slider img {
+                width: 95%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="header-bg">
+        <div class="nav-wrapper">
+            <ul class="left">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="walkins.html">Walk-Ins</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="section header-bg center-align">
+        <h1 class="white-text">Black Beauty Hive</h1>
+        <p class="white-text">Your go-to platform for Black hair care, hairstylists, and trending styles!</p>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="section section-bg">
+        <div class="container">
+            <h2>Welcome to Black Beauty Hive!</h2>
+            <p>
+                We provide a space where you can <strong>book hairstylists</strong>, 
+                <u>purchase high-quality hair products</u>, and 
+                <em>stay updated on the latest trends on social media</em>.
+            </p>
+        </div>
+    </div>
+
+    <div class="section center-align">
+        <div class="row">
+            <!-- Logo Column -->
+            <div class="col s12 m6">
+                <img src="images/logo.png" alt="Black Beauty Hive Logo" class="responsive-img shadow" style="display: block; margin: 0 auto;">
+            </div>
+    
+            <!-- Founder Column -->
+            <div class="col s12 m6">
+                <h2>Meet the Founder</h2>
+                <img src="images/founder.jpg" alt="Founder" class="circle responsive-img" style="width: 400px; height: 400px; object-fit: cover;">
+                <p>Founder of Black Beauty Hive - Passionate about bringing together the beauty of Black hair care!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Video Embed Section -->
+    <div class="section">
+        <div class="container">
+            <h2>Check Out Our Introduction Video</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <blockquote class="flow-text center-align">
+        "My hair is an extension of my soul. It’s not just hair; it’s an identity." — Lupita Nyong’o
+    </blockquote>
+
+    <!-- Our Services Section -->
+    <div class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Find and book professional hairstylists in your area</li>
+                <li>Shop for top-tier hair and hair care products</li>
+                <li>Discover and try new trending hairstyles</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Top Hairstylists Section -->
+    <div class="section section-bg">
+        <div class="container">
+            <h2>Top Hairstylists Available</h2>
+            <table class="highlight">
+                <thead>
+                    <tr class="table-header">
+                        <th>Name</th>
+                        <th>Specialty</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jasmine Styles</td>
+                        <td>Braider and Locticians</td>
+                        <td>Mayfield Area</td>
+                    </tr>
+                    <tr>
+                        <td>Hair by Dani</td>
+                        <td>Weave Specialist</td>
+                        <td>Cleveland Heights Area</td>
+                    </tr>
+                    <tr>
+                        <td>Amour Cuts</td>
+                        <td>Silk Press, Natural Hair Specialist</td>
+                        <td>Bedford Area</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p class="center-align">
+        Check out more hairstylists and book an appointment here: 
+        <a href="https://www.example.com" class="btn waves-effect waves-light" target="_blank">Find Your Stylist</a>
+    </p>
+
+    <!-- Trending Styles Section -->
+    <div class="section">
+        <div class="container">
+            <h2>Trending Styles</h2>
+            <div class="carousel">
+                <a class="carousel-item" href="#one!"><img src="images/style1.jpg" alt="Style 1"></a>
+                <a class="carousel-item" href="#two!"><img src="images/style2.jpg" alt="Style 2"></a>
+                <a class="carousel-item" href="#three!"><img src="images/style3.jpg" alt="Style 3"></a>
+                <a class="carousel-item" href="#two!"><img src="images/style4.jpg" alt="Style 2"></a>
+                <a class="carousel-item" href="#three!"><img src="images/style5.jpg" alt="Style 3"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const carousel = document.querySelectorAll('.carousel');
+        M.Carousel.init(carousel, {
+            fullWidth: true,
+            indicators: true
+        });
+    </script>
+
+    <script>
+        // Initialize modal
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+        });
+
+
+        // Function to display selected pastry
+        function displayPastry() {
+            const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
+            document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
+        }
+        // Function to handle email subscription form submission
+        function submitEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+            document.getElementById('email').value = ''; // Clear the input
+
+
+            // Display modal
+            const modalText = document.getElementById('modal-content-text');
+            modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+            const modal = M.Modal.getInstance(document.getElementById('modal1'));
+            modal.open();
+        }
+    </script>
+
+    <div id="radio-section" class="section container">
+        <h2>Before you go, what brings you to Black Beauty Hive today?</h2>
+        <form>
+            <p>
+                <label>
+                    <input name="reasoning" type="radio" value="stylist" onclick="displayReasoning()"/>
+                    <span>A. I'm looking to book a hairstylist</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="reasoning" type="radio" value="styles" onclick="displayReasoning()"/>
+                    <span>B. I'm here to check out trending Black hair styles</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="reasoning" type="radio" value="products" onclick="displayReasoning()"/>
+                    <span>C. I want to explore hair care products</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="reasoning" type="radio" value="browsing" onclick="displayReasoning()"/>
+                    <span>D. Just browsing and vibing</span>
+                </label>
+            </p>
+        </form>
+        <div id="reasoning-response"></div>
+    </div>
+
+
+    <!-- Email Feedback Section -->
+     <div id="feedback-section" class="section container">
+        <h2>Subscribe for Promotions and Monthly Newletter</h2>
+        <form onsubmit="submitEmail(event)">
+            <div class="input-field">
+                <input id="email" type="email" required>
+                <label for="email">Email</label>
+            </div>
+            <button type="submit" class="btn waves-effect waves-light">Subscribe</button>
+        </form>
+        <div id="email-response"></div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Check Your email-response</h4>
+            <p id="modal-content-text"></p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+            >Close</a
+           >
+        </div>
+    </div>
+
+    <footer class="section center-align">
+        <p>Contact us: (555) 123-4567 | Email: info@blackbeautyhive.com</p>
+        <p>&copy; 2025 Black Beauty Hive. All rights reserved.</p>
+        <a href="#" id="backToTop" class="btn waves-effect waves-light">Back to Top</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                dist: 0,
+                padding: 10,
+                numVisible: 3,
+                shift: 0
+            });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
