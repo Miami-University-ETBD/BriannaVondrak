@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Beauty Hive</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff8f2;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(to right, #9333ea, #f43f5e);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            display: block;
+            margin: 25px auto 10px auto;
+            padding: 12px 20px;
+            font-size: 1em;
+            background-color: #f43f5e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #be123c;
+        }
+
+        .section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #trendSlide img {
+            width: 150px;
+            height: 150px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #beautyTip {
+            margin-top: 10px;
+            color: #6b21a8;
+            font-style: italic;
+        }
+
+        #glowUp {
+            background-color: #fff0f5;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 12px;
+            width: 60%;
+            box-shadow: 0 0 12px rgba(0,0,0,0.05);
+            display: none;
+        }
+
+        #glowUp p {
+            font-weight: bold;
+            color: #8b5cf6;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Black Beauty Hive</h1>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="walkins.html">Walk-ins</a>
+            <a href="contact.html">Contact</a>
+            <a href="materialize.html">Materialize</a>
+            <a href="jquery.html">JQuery</a>
+        </div>
+    </header>
+
+    <div class="section">
+        <h2>Popular Styles</h2>
+        <div id="trendSlide">
+            <img src="images/trendstyle1.jpg" alt="Trend 1">
+        </div>
+        <button id="nextTrendBtn">Next Favorite</button>
+    </div>
+
+    <div class="section">
+        <h2>Beauty Tip of the Day</h2>
+        <button id="showTipBtn">Reveal Tip</button>
+        <p id="beautyTip" style="display:none;">Apply oils on damp hair to lock in moisture!</p>
+    </div>
+
+    <div class="section">
+        <h2>Glow Up of the Day ✨</h2>
+        <button id="glowBtn">Show Glow Up</button>
+        <div id="glowUp">
+            <p>Today's Glow: Honey Infused Curl Cream by B.B. Hive</p>
+        </div>
+    </div>
+
+    <script>
+        const trendImages = [
+            "images/trendstyle1.jpg",
+            "images/trendstyle2.jpg",
+            "images/trendstyle3.jpg"
+        ];
+        let trendIndex = 0;
+
+        $("#nextTrendBtn").click(function(){
+            trendIndex = (trendIndex + 1) % trendImages.length;
+            $("#trendSlide img").fadeOut(300, function(){
+                $(this).attr("src", trendImages[trendIndex]).fadeIn(300);
+            });
+        });
+
+        $("#showTipBtn").click(function(){
+            $("#beautyTip").slideToggle();
+        });
+
+        $("#glowBtn").click(function(){
+            $("#glowUp").fadeIn("slow").delay(500).fadeOut(3000);
+        });
+    </script>
+</body>
+</html>
+
