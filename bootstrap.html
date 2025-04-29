@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #ffecd1;
+      color: #001524;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .header-bg {
+      background-color: #15616d;
+    }
+
+    .container-fluid {
+      background-color: #15616d;
+      color: #ffecd1;
+    }
+
+    h1, h2, h3 {
+      color: #001524;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    .accordion-button {
+      background-color: #15616d;
+      color: #ffecd1;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #104a57;
+      color: #ffecd1;
+    }
+
+    .accordion-body {
+      background-color: #ffecd1;
+    }
+
+    .btn-primary, .btn-light {
+      background-color: #15616d;
+      color: #ffecd1;
+    }
+
+    .btn-primary:hover, .btn-light:hover {
+      background-color: #104a57;
+    }
+
+    .modal-content {
+      background-color: #ffecd1;
+      color: #001524;
+    }
+
+    .form-control {
+      border: 1px solid #15616d;
+    }
+
+    .form-label {
+      color: #001524;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #15616d;
+      color: #ffecd1;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid p-5 text-center">
+  <h1>The Importance of Black Beauty</h1>
+  <p>We Are More Than An Aesthetic</p>
+  <button type="button" class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#infoModal">
+    Learn More
+  </button>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Identity</h3>
+      <p>Beauty is more than just a section in a store.</p>
+      <p>It's culture, it's heritage — it's me, you, and us.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Representation</h3>
+      <p>Representation challenges stereotypes and inspires the next generation. 
+         "I can do it because she did."</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Empowerment</h3>        
+      <p>It builds confidence, encourages authenticity, and celebrates uniqueness.</p>
+    </div>
+  </div>
+</div>
+
+<div class="accordion mt-5" id="blackBeautyFacts">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+        More Than Just A Movement
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#blackBeautyFacts">
+      <div class="accordion-body">
+        Black beauty is not a trend. It's a testament to the Black community's resilience, culture, and identity. It's rooted in history and kinship—woven through generations with pride and power.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+        More Than Inspiration
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#blackBeautyFacts">
+      <div class="accordion-body">
+        Black beauty is not just inspiring—it's affirming. We are more than just a Pinterest board or something to be consumed and replicated. Our beauty exists boldly, authentically, and without apology.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Affirmations of Black Beauty</h3>
+    <div id="affirmationCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner rounded shadow">
+        <div class="carousel-item active">
+          <div class="p-4 text-center">
+            <blockquote class="blockquote">
+              <p class="mb-3">“Black women are the epitome of beauty. Our skin, our hair, our souls exude strength and grace.”</p>
+              <footer class="blockquote-footer text-muted">Michelle Obama</footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="p-4 text-center">
+            <blockquote class="blockquote">
+              <p class="mb-3">“The beauty of blackness is multifaceted. It is strength, grace, and resilience all in one.”</p>
+              <footer class="blockquote-footer text-muted">Viola Davis</footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="p-4 text-center">
+            <blockquote class="blockquote">
+              <p class="mb-3">"There is no shame in black beauty."</p>
+              <footer class="blockquote-footer text-muted">Lupita Nyong'o</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#affirmationCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#affirmationCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
+
+<div class="container mt-5">
+  <h3>Share Your Thoughts</h3>
+  <form>
+    <div class="mb-3">
+      <label for="nameInput" class="form-label">Name</label>
+      <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+    </div>
+    <div class="mb-3">
+      <label for="emailInput" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+    </div>
+    <div class="mb-3">
+      <label for="messageTextarea" class="form-label">Message</label>
+      <textarea class="form-control" id="messageTextarea" rows="3" placeholder="Why is Black beauty important to you?"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">More About Black Beauty</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Celebrating Black beauty means honoring history, culture, and identity through visibility and representation.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 The Importance of Black Beauty. All rights reserved.
+</footer>
+
+</body>
+</html>
